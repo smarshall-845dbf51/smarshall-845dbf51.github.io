@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美剧在线-热门美剧推荐_美剧在线观看指南与追剧社区</title>
+  <meta name="description" content="美剧在线专题页，提供热门美剧推荐、最新美剧更新动态、深度剧评与追剧指南。涵盖悬疑、科幻、犯罪、喜剧等类型，助你快速找到值得追的美剧在线内容。">
+  <meta name="keywords" content="美剧在线,美剧推荐,美剧在线观看,热门美剧,美剧追剧指南">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-soft: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --accent-dark: #1e40af;
+      --border-light: #e2e8f0;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 12px 24px -8px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.02);
+      --radius-card: 16px;
+      --radius-sm: 10px;
+      --max-width: 1200px;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 顶部导航 */
+    .top-nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-ghost {
+      padding: 8px 16px;
+      border-radius: 40px;
+      border: 1px solid var(--border-light);
+      background: transparent;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      cursor: default;
+    }
+
+    .btn-primary {
+      padding: 8px 20px;
+      border-radius: 40px;
+      background: var(--accent);
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+      cursor: default;
+    }
+
+    /* 首屏 Banner */
+    .hero-section {
+      padding: 48px 0 32px;
+      background: linear-gradient(160deg, #ffffff 0%, #f0f7ff 100%);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .hero-text {
+      flex: 1 1 500px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .hero-text h1 span {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .search-box {
+      display: flex;
+      background: white;
+      border-radius: 60px;
+      padding: 6px 6px 6px 20px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background: transparent;
+      color: var(--text-primary);
+    }
+
+    .search-box input::placeholder {
+      color: #94a3b8;
+    }
+
+    .search-box button {
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: default;
+    }
+
+    .quick-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag-pill {
+      padding: 8px 18px;
+      background: white;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    .tag-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #f0f7ff;
+    }
+
+    .hero-visual {
+      flex: 0 0 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .poster-stack {
+      width: 280px;
+      height: 200px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border-radius: 24px;
+      box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.05em;
+      background-image: radial-gradient(circle at 30% 40%, #3b82f6 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, #a855f7 0%, transparent 50%);
+      background-blend-mode: overlay;
+      transform: rotate(2deg);
+    }
+
+    /* 通用 section 标题 */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .section-more {
+      font-size: 0.95rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .content-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-type {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      background: var(--accent-light);
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 30px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .card-tags span {
+      font-size: 0.75rem;
+      background: var(--bg-soft);
+      padding: 3px 10px;
+      border-radius: 30px;
+      color: var(--text-muted);
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+      padding-top: 12px;
+      margin-top: auto;
+    }
+
+    /* 更新列表 */
+    .update-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .update-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--shadow-sm);
+      transition: background 0.15s;
+    }
+
+    .update-item:hover {
+      background: #f8faff;
+    }
+
+    .update-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .update-title span:first-child {
+      font-size: 1rem;
+    }
+
+    .update-badge {
+      font-size: 0.7rem;
+      background: var(--accent-light);
+      padding: 2px 8px;
+      border-radius: 20px;
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    .update-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .category-chip {
+      background: white;
+      border-radius: 40px;
+      padding: 14px 0;
+      text-align: center;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.15s;
+      text-decoration: none;
+    }
+
+    .category-chip:hover {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      border-color: var(--accent);
+    }
+
+    /* 深度解析 */
+    .deep-analysis {
+      background: white;
+      border-radius: var(--radius-card);
+      padding: 36px 40px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      margin-bottom: 48px;
+    }
+
+    .deep-analysis h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .deep-analysis p {
+      margin-bottom: 18px;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .deep-analysis h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 28px 0 12px;
+      color: var(--text-primary);
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .faq-card {
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 22px 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+      display: flex;
+      gap: 10px;
+    }
+
+    .faq-q::before {
+      content: "Q";
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .faq-a {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 用户评论 */
+    .comment-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+      margin-bottom: 48px;
+    }
+
+    .comment-card {
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .comment-user {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .comment-date {
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .comment-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 资讯卡片 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: box-shadow 0.15s;
+    }
+
+    .news-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .news-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .news-summary {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: white;
+      border-top: 1px solid var(--border-light);
+      padding: 40px 0 28px;
+      margin-top: 20px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-top: 8px;
+      max-width: 320px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .footer-col a {
+      display: block;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-light);
+      padding-top: 20px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid {
+        flex-direction: column;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .deep-analysis {
+        padding: 24px;
+      }
+
+      .section-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .search-box {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        gap: 10px;
+      }
+
+      .search-box input {
+        background: white;
+        border: 1px solid var(--border-light);
+        border-radius: 40px;
+        padding: 12px 20px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .search-box button {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <!-- 导航 -->
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo-badge" id="site-logo">
+        <span class="logo-icon"></span>
+        <span>美剧在线</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#热门推荐">热门推荐</a>
+        <a href="/#最新更新">最新更新</a>
+        <a href="/#深度解析">深度解析</a>
+        <a href="/#常见问题">FAQ</a>
+        <a href="/#用户评论">评论</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-ghost">登录</button>
+        <button class="btn-primary">追剧清单</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首屏 Banner -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>美剧在线 · 热门剧集一站追</h1>
+          <p class="hero-desc">从高分悬疑到科幻史诗，从律政职场到黑色喜剧，美剧在线为你聚合最新最热的美剧资源与深度指南。每日更新剧集动态、编辑精选片单和社区真实口碑，帮你告别剧荒。</p>
+          <div class="search-box">
+            <input type="text" placeholder="搜索美剧名称、演员或类型...">
+            <button>搜索</button>
+          </div>
+          <div class="quick-tags">
+            <a href="/#热门推荐" class="tag-pill">高分悬疑</a>
+            <a href="/#热门推荐" class="tag-pill">科幻巨制</a>
+            <a href="/#最新更新" class="tag-pill">本周新剧</a>
+            <a href="/#深度解析" class="tag-pill">编辑精选</a>
+            <a href="/#分类入口" class="tag-pill">犯罪纪实</a>
+            <a href="/#用户评论" class="tag-pill">社区热评</a>
+            <a href="/#常见问题" class="tag-pill">入坑指南</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="poster-stack">美剧在线</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 热门推荐 -->
+    <section id="热门推荐" class="container" style="padding-top: 40px;">
+      <div class="section-header">
+        <h2>热门美剧在线推荐</h2>
+        <a href="/#热门推荐" class="section-more">查看全部 →</a>
+      </div>
+      <div class="card-grid">
+        <div class="content-card">
+          <span class="card-type">悬疑</span>
+          <h3 class="card-title">《迷雾边缘》第二季</h3>
+          <div class="card-tags"><span>烧脑</span><span>小镇谜案</span><span>豆瓣8.9</span></div>
+          <p class="card-desc">当所有证据指向同一个人，真相却开始崩塌。第二季深入警探的心理创伤，双线叙事再升级。</p>
+          <div class="card-meta"><span>热度 98.2万</span><span>更新至E06</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">科幻</span>
+          <h3 class="card-title">《星际回响》</h3>
+          <div class="card-tags"><span>太空歌剧</span><span>AI觉醒</span><span>视觉奇观</span></div>
+          <p class="card-desc">一艘失联二十年的探索舰突然返航，船员却对经历集体失忆。硬科幻外壳下的人性拷问。</p>
+          <div class="card-meta"><span>热度 87.6万</span><span>全8集</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">犯罪</span>
+          <h3 class="card-title">《暗账》</h3>
+          <div class="card-tags"><span>金融犯罪</span><span>高智商对决</span><span>真实改编</span></div>
+          <p class="card-desc">一个会计事务所背后的洗钱网络，FBI卧底与黑帮会计的猫鼠游戏，节奏紧凑无尿点。</p>
+          <div class="card-meta"><span>热度 79.4万</span><span>更新至E09</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">喜剧</span>
+          <h3 class="card-title">《合租不简单》第四季</h3>
+          <div class="card-tags"><span>都市</span><span>友情</span><span>爆笑</span></div>
+          <p class="card-desc">四个性格迥异的年轻人继续在纽约合租，这一季有人求婚有人失业，笑中带泪的生活喜剧。</p>
+          <div class="card-meta"><span>热度 72.8万</span><span>全10集</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">剧情</span>
+          <h3 class="card-title">《群山之间》</h3>
+          <div class="card-tags"><span>家族史诗</span><span>西部</span><span>年代剧</span></div>
+          <p class="card-desc">横跨三十年的家族牧场争夺战，每一帧都像油画。细腻刻画亲情与背叛的边界。</p>
+          <div class="card-meta"><span>热度 68.1万</span><span>全6集</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">奇幻</span>
+          <h3 class="card-title">《渡鸦之影》</h3>
+          <div class="card-tags"><span>魔法学院</span><span>暗黑童话</span><span>反英雄</span></div>
+          <p class="card-desc">当预言中的救世主是个自私的骗子，魔法世界会怎样？颠覆传统的奇幻新作，设定大胆。</p>
+          <div class="card-meta"><span>热度 64.3万</span><span>更新至E04</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">医疗</span>
+          <h3 class="card-title">《急诊夜班》</h3>
+          <div class="card-tags"><span>职业剧</span><span>生死抉择</span><span>群像</span></div>
+          <p class="card-desc">聚焦一家公立医院的夜班急诊室，每集一个长镜头，真实到令人窒息的医疗现场。</p>
+          <div class="card-meta"><span>热度 59.7万</span><span>更新至E11</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">政治</span>
+          <h3 class="card-title">《权力的走廊》</h3>
+          <div class="card-tags"><span>白宫风云</span><span>权谋</span><span>快节奏</span></div>
+          <p class="card-desc">新任女幕僚长如何在四面楚歌的白宫站稳脚跟？每集反转不断，台词密度极高。</p>
+          <div class="card-meta"><span>热度 55.2万</span><span>全10集</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section id="最新更新" class="container">
+      <div class="section-header">
+        <h2>美剧在线最新更新动态</h2>
+        <a href="/#最新更新" class="section-more">全部更新 →</a>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <div class="update-title"><span>《迷雾边缘》S2</span><span class="update-badge">今日更新</span></div>
+          <div class="update-desc">S2E06 上线：关键证人翻供，警探被迫与旧敌合作。</div>
+        </div>
+        <div class="update-item">
+          <div class="update-title"><span>《星际回响》</span><span class="update-badge">已完结</span></div>
+          <div class="update-desc">全8集释出，最终集留白引发续订猜测。</div>
+        </div>
+        <div class="update-item">
+          <div class="update-title"><span>《暗账》</span><span class="update-badge">明日更新</span></div>
+          <div class="update-desc">E09 预告：卧底身份暴露，会计准备跑路。</div>
+        </div>
+        <div class="update-item">
+          <div class="update-title"><span>《合租不简单》S4</span><span class="update-badge">已完结</span></div>
+          <div class="update-desc">全10集上线，大结局婚礼现场笑料不断。</div>
+        </div>
+        <div class="update-item">
+          <div class="update-title"><span>《渡鸦之影》</span><span class="update-badge">每周三更新</span></div>
+          <div class="update-desc">E04 已上线：男主获得暗影之力，但代价巨大。</div>
+        </div>
+        <div class="update-item">
+          <div class="update-title"><span>《急诊夜班》</span><span class="update-badge">今日更新</span></div>
+          <div class="update-desc">E11 上线：一场大规模车祸让急诊室超负荷。</div>
+        </div>
+        <div class="update-item">
+          <div class="update-title"><span>《群山之间》</span><span class="update-badge">已完结</span></div>
+          <div class="update-desc">全6集上线，西部家族史诗一次性放出。</div>
+        </div>
+        <div class="update-item">
+          <div class="update-title"><span>《权力的走廊》</span><span class="update-badge">全10集</span></div>
+          <div class="update-desc">全季上线，白宫权力游戏一次性刷完。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section id="分类入口" class="container">
+      <div class="section-header">
+        <h2>按类型发现美剧在线</h2>
+        <a href="/#分类入口" class="section-more">更多分类 →</a>
+      </div>
+      <div class="category-grid">
+        <a href="/#热门推荐" class="category-chip">悬疑烧脑</a>
+        <a href="/#热门推荐" class="category-chip">科幻奇幻</a>
+        <a href="/#热门推荐" class="category-chip">犯罪纪实</a>
+        <a href="/#热门推荐" class="category-chip">喜剧生活</a>
+        <a href="/#热门推荐" class="category-chip">医疗职业</a>
+        <a href="/#热门推荐" class="category-chip">政治权谋</a>
+        <a href="/#热门推荐" class="category-chip">年代史诗</a>
+        <a href="/#热门推荐" class="category-chip">青春校园</a>
+      </div>
+    </section>
+
+    <!-- 深度解析 -->
+    <section id="深度解析" class="container">
+      <div class="deep-analysis">
+        <h2>深度解析：美剧在线观看的选题逻辑与内容价值</h2>
+        <p>对于很多观众来说，“美剧在线”不仅意味着一个观看入口，更代表一种高效筛选优质内容的方式。面对每年上百部新剧，如何快速判断哪部值得投入时间，是核心痛点。本页面正是为了解决这一问题——我们不做简单的剧集罗列，而是从类型脉络、制作水准、观众口碑三个维度进行拆解，帮助你在碎片化时间里找到最对味的那一部。</p>
+        <p>从类型上看，近年美剧在线内容呈现出明显的“复合化”趋势。纯悬疑剧往往融入家庭伦理，科幻剧开始探讨社会议题，律政剧则加入更多心理博弈。例如本页推荐的《迷雾边缘》将小镇谋杀案与警探个人创伤交织，在破案主线外提供了丰富的人物弧光；《星际回响》用太空歌剧的壳子包裹AI自我意识觉醒的哲学追问，这种跨类型的创作让美剧的深度远超普通娱乐产品。</p>
+        <h3>人物塑造与叙事节奏</h3>
+        <p>美剧在线的核心竞争力之一在于人物群像的立体感。相比电影，剧集有更充裕的时间去铺陈角色的前史与动机。以《急诊夜班》为例，每一集通过长镜头跟拍不同医生的夜班经历，逐渐拼凑出整个急诊室的生态。观众在追剧过程中会自然产生代入感，仿佛自己也成了夜班团队的一员。这种沉浸式体验是短剧或电影难以替代的。</p>
+        <p>在节奏把控上，美剧通常采用“单元剧+主线推进”的混合模式。犯罪剧《暗账》每集解决一个小案件，同时推进FBI卧底的主线，既保证了单集的完整性，又用钩子留住观众。对于在线观看的用户来说，这种结构非常友好——你可以随时暂停，但总想知道“下一集发生了什么”。</p>
+        <h3>制作水准与视听语言</h3>
+        <p>头部美剧的视听质感已经向电影看齐。从摄影构图到调色配乐，都值得细细品味。《群山之间》的每一帧都呈现出油画般的西部风光，光线运用克制而精准；《渡鸦之影》则用冷色调和阴影构建出暗黑魔法世界的氛围。在线观看时，建议尽量选择高码率版本，以还原主创的视觉意图。</p>
+        <p>配乐同样是美剧在线体验的重要一环。许多剧集会为主题角色定制音乐主题，在关键场景中反复变奏出现，强化情感记忆。例如《合租不简单》虽然是一部喜剧，但每集结尾的抒情段落都会用同一段钢琴旋律收束，让笑闹过后多了一份温暖。</p>
+        <h3>适合人群与搜索意图</h3>
+        <p>搜索“美剧在线”的用户，通常处于以下几种状态：一是想找一部高口碑剧集下饭，需要明确的类型筛选；二是追更某部剧，想确认更新时间与集数；三是寻找类似已完结剧集的替代品。本页面的热门推荐、最新更新和深度解析三个板块，正好覆盖了这三种需求。如果你是刚接触美剧的新观众，建议从喜剧或医疗剧入手，门槛较低；如果你偏爱烧脑剧情，可以优先看悬疑和科幻分类；如果你时间碎片化，短小精悍的限定剧（如全6集的《群山之间》）会更适合。</p>
+        <p>最后，美剧在线的价值不仅在于“看”，更在于“聊”。本页底部的用户评论区汇集了真实观众的观点，有安利、有吐槽、有对剧情的推理，这些UGC内容能帮助你从不同角度理解一部作品，甚至发现被忽略的细节。我们始终认为，好的内容社区应该让看剧从单向消费变成双向互动。</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="常见问题" class="container">
+      <div class="section-header">
+        <h2>美剧在线常见问题</h2>
+        <a href="/#常见问题" class="section-more">更多问答 →</a>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-q">美剧在线观看和下载有什么区别？</div>
+          <div class="faq-a">在线观看无需等待下载，适合追更和碎片时间；下载则更适合网络不稳定或希望离线观看的场景。本页面推荐的内容主要针对在线观看场景，提供更新提醒和社区讨论，帮助你把握最新进度。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">如何判断一部新美剧是否值得追？</div>
+          <div class="faq-a">可以先关注类型标签和制作班底。如果编剧或导演有高分前作，通常质量更有保障。另外，本页的“深度解析”会定期拆解热门剧集的看点，你可以参考其中的节奏分析和人物评价来做决定。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">《迷雾边缘》第二季需要补第一季吗？</div>
+          <div class="faq-a">强烈建议补第一季。第二季直接延续第一季结尾的悬念，且人物关系复杂，直接看第二季容易跟不上动机。第一季共8集，节奏紧凑，补起来不会花太多时间。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">限定剧和常规剧集哪个更适合入门？</div>
+          <div class="faq-a">如果你刚开始接触美剧，限定剧（全6-8集）是更好的选择。篇幅短，故事完整，不会因为中途砍剧而留下遗憾。本页推荐的《群山之间》和《星际回响》都是限定剧，适合一次刷完。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">美剧在线更新频率通常是怎样的？</div>
+          <div class="faq-a">大多数美剧采用周更模式，每周固定一天播出新集。部分流媒体剧集会一次性放出全季。本页的“最新更新”板块会标注每部剧的更新状态，你可以根据标注安排追剧时间。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">为什么有的热门美剧在推荐列表里找不到？</div>
+          <div class="faq-a">本页推荐主要依据近期热度、口碑和编辑评估，并非全量收录。如果你有特别想找的剧，可以使用页面顶部的搜索框尝试查找，或者查看分类入口中的相关类型，可能会有意外发现。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section id="用户评论" class="container">
+      <div class="section-header">
+        <h2>美剧在线社区热评</h2>
+        <a href="/#用户评论" class="section-more">参与讨论 →</a>
+      </div>
+      <div class="comment-list">
+        <div class="comment-card">
+          <div class="comment-user"><span>追剧小能手</span><span class="comment-date">2026-11-05</span></div>
+          <div class="comment-text">《迷雾边缘》S2E06 那个反转我直接尖叫！警探和旧敌联手那段张力拉满，编剧太会了。就是更新太慢，每周等得好苦。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>太空漫游者</span><span class="comment-date">2026-11-04</span></div>
+          <div class="comment-text">《星际回响》的美术和配乐是电影级别的，尤其第七集AI觉醒那段独白，后劲太大。可惜结尾有点仓促，希望能续订。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>会计小张</span><span class="comment-date">2026-11-02</span></div>
+          <div class="comment-text">《暗账》太真实了，作为财务从业者看得很过瘾。不过有些税务细节有点小bug，不影响整体观感。推荐给喜欢高智商犯罪的朋友。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>合租老友记</span><span class="comment-date">2026-11-01</span></div>
+          <div class="comment-text">《合租不简单》第四季水准保持得不错，虽然有些梗重复了，但角色之间的化学反应还是很好笑。下饭神器，一集二十分钟刚刚好。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>西部老枪</span><span class="comment-date">2026-10-30</span></div>
+          <div class="comment-text">《群山之间》摄影太美了，每一帧都能当壁纸。故事虽然慢热，但看到第三集就完全沉浸了。喜欢《黄石》的应该也会喜欢这部。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>夜班护士Lily</span><span class="comment-date">2026-10-28</span></div>
+          <div class="comment-text">作为医疗从业者，《急诊夜班》的长镜头真的震撼，虽然戏剧化处理不可避免，但氛围感做到了。希望第二季能保持水准。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>白宫观察员</span><span class="comment-date">2026-10-27</span></div>
+          <div class="comment-text">《权力的走廊》台词密度太高了，稍微走神就跟不上。但这就是政治剧的魅力，每集结尾都让人想立刻点下一集。女主演技炸裂。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>渡鸦信徒</span><span class="comment-date">2026-10-26</span></div>
+          <div class="comment-text">《渡鸦之影》设定很吸引人，反套路男主挺有意思的。不过第四集特效有点五毛，希望经费能撑住后面的魔法大战。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>剧荒终结者</span><span class="comment-date">2026-10-25</span></div>
+          <div class="comment-text">感谢这个页面，按分类找剧太方便了。最近把《急诊夜班》和《暗账》都追平了，质量都在线。希望多推荐一些冷门好剧。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>科幻迷阿远</span><span class="comment-date">2026-10-22</span></div>
+          <div class="comment-text">《星际回响》的硬核设定在美剧里算难得的，不过有些物理细节经不起推敲。作为娱乐片看还是很优秀的，别太较真就行。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>周末窝沙发</span><span class="comment-date">2026-10-20</span></div>
+          <div class="comment-text">页面设计清爽，更新动态一眼就能看到今天哪些剧更新了。不过希望能加一个“仅看已完结”的筛选，追更太累了。</div>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user"><span>喜剧爱好者</span><span class="comment-date">2026-10-18</span></div>
+          <div class="comment-text">《合租不简单》这一季新加入的角色有点多余，但老角色还是好笑。下饭剧不需要太深刻，能让人放松就够了。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section id="相关资讯" class="container">
+      <div class="section-header">
+        <h2>美剧在线相关资讯</h2>
+        <a href="/#相关资讯" class="section-more">更多资讯 →</a>
+      </div>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-date">2026-11-06</div>
+          <div class="news-title">《迷雾边缘》第三季正式续订，主创透露将探索新时间线</div>
+          <div class="news-summary">据外媒报道，热门悬疑剧《迷雾边缘》已获第三季续订，编剧团队表示下一季将引入时间跳跃设定，部分角色将迎来重大转变。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-05</div>
+          <div class="news-title">流媒体平台公布11月美剧在线片单，多部限定剧集中上线</div>
+          <div class="news-summary">本月将有超过12部新美剧上线各平台，其中限定剧占比过半。悬疑和科幻类型依然是市场主力，喜剧类也有两部备受期待的新作。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-03</div>
+          <div class="news-title">《急诊夜班》收视率创新高，电视台考虑追加第二季订单</div>
+          <div class="news-summary">该剧凭借独特的沉浸式长镜头和真实医疗案例改编，连续四周收视上涨。制作方表示如果续订，将保持原有拍摄风格。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-01</div>
+          <div class="news-title">《星际回响》主创访谈：AI觉醒故事的灵感来自一次太空模拟</div>
+          <div class="news-summary">在接受采访时，主创透露该剧的AI角色设计参考了现实中的语言模型演化过程，并强调第二季的剧本正在筹备中。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-10-29</div>
+          <div class="news-title">经典犯罪剧重启版发布首支预告，明年春季上线</div>
+          <div class="news-summary">一部90年代经典犯罪剧的全新重启版发布了首支预告片，保留了原版的核心设定，但换上了更年轻的演员阵容，引发老剧迷热议。</div>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-10-27</div>
+          <div class="news-title">美剧在线观看习惯调查：超六成观众倾向于攒肥了一次性刷</div>
+          <div class="news-summary">最新调查显示，超过60%的受访者表示会等一部剧完结后再集中观看，只有不到三成会每周追更。这或影响未来剧集的排播策略。</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-badge" style="margin-bottom: 8px;">
+            <span class="logo-icon"></span>
+            <span>美剧在线</span>
+          </div>
+          <p>聚合热门美剧在线观看指南、深度剧评与社区讨论，帮助每一位剧迷找到下一部心头好。</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>探索</h4>
+            <a href="/#热门推荐">热门推荐</a>
+            <a href="/#最新更新">最新更新</a>
+            <a href="/#分类入口">分类入口</a>
+            <a href="/#深度解析">深度解析</a>
+          </div>
+          <div class="footer-col">
+            <h4>帮助</h4>
+            <a href="/#常见问题">常见问题</a>
+            <a href="/#用户评论">社区评论</a>
+            <a href="/#相关资讯">相关资讯</a>
+          </div>
+          <div class="footer-col">
+            <h4>友情链接</h4>
+            <a href="#">剧集数据库</a>
+            <a href="#">影视资讯站</a>
+            <a href="#">评分社区</a>
+            <a href="#">字幕组联盟</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 美剧在线 · 内容仅供学习与交流参考</span>
+        <span>免责声明：本站不提供任何视频存储与下载服务，所有内容均来自公开信息整理。</span>
+      </div>
+    </div>
+  </footer>
+</body>
+  </html>
