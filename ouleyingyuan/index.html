@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>欧乐影院-在线影视剧集推荐_欧乐影院热门电影电视剧观看指南</title>
+<meta name="description" content="欧乐影院是专注影视剧集在线观看与推荐的内容专题页，汇总热门电影、热播电视剧、高分剧集、院线新片与追剧指南，帮助你快速了解欧乐影院的影片类型、更新动态、口碑排行与观影顺序，找到值得收藏的好片。">
+<meta name="keywords" content="欧乐影院,欧乐影院电影,欧乐影院电视剧,在线影视推荐,追剧指南">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b2d'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ffc246' stroke-width='4'/%3E%3Cpath d='M28 24l14 8-14 8z' fill='%23ffc246'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#0d1420;
+  --bg-soft:#131d2c;
+  --card:#182335;
+  --card-2:#1e2b40;
+  --line:rgba(255,255,255,.08);
+  --txt:#e8eef8;
+  --txt-2:#9db0c9;
+  --txt-3:#71849c;
+  --gold:#ffc246;
+  --gold-soft:rgba(255,194,70,.14);
+  --cyan:#4fd1c5;
+  --pink:#f2758e;
+  --r:14px;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(900px 480px at 12% -8%,rgba(255,194,70,.10),transparent 60%),
+    radial-gradient(800px 420px at 88% 0%,rgba(79,209,197,.10),transparent 60%),
+    var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  font-size:15px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+.oly-head{
+  position:sticky;top:0;z-index:60;
+  background:rgba(13,20,32,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.oly-head-in{display:flex;align-items:center;gap:22px;height:62px}
+.oly-logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.5px;font-size:18px;white-space:nowrap}
+.oly-logo i{
+  width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,#ffc246,#ff8a3d);color:#1a1206;font-style:normal;font-size:14px;font-weight:900;
+}
+.oly-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
+.oly-nav::-webkit-scrollbar{display:none}
+.oly-nav a{
+  padding:7px 11px;border-radius:9px;font-size:13.5px;color:var(--txt-2);white-space:nowrap;transition:.2s;
+}
+.oly-nav a:hover{background:var(--card-2);color:var(--gold)}
+.oly-head-btn{
+  background:linear-gradient(135deg,#ffc246,#ff9d3c);color:#20160a;font-weight:700;
+  padding:8px 16px;border-radius:10px;font-size:13.5px;white-space:nowrap;box-shadow:0 6px 16px rgba(255,160,50,.22)
+}
+.oly-hero{padding:44px 0 26px;position:relative;overflow:hidden}
+.oly-hero::after{
+  content:"";position:absolute;inset:auto -10% -60% -10%;height:70%;
+  background:radial-gradient(closest-side,rgba(79,209,197,.10),transparent);pointer-events:none
+}
+.oly-hero-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:34px;align-items:center;position:relative;z-index:2}
+.oly-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--gold);
+  background:var(--gold-soft);border:1px solid rgba(255,194,70,.25);
+  padding:5px 12px;border-radius:999px;margin-bottom:16px
+}
+.oly-kicker b{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block}
+.oly-hero h1{font-size:36px;line-height:1.3;letter-spacing:.5px;font-weight:800}
+.oly-hero h1 em{font-style:normal;color:var(--gold)}
+.oly-hero p.lead{color:var(--txt-2);margin-top:14px;font-size:15px;max-width:560px}
+.oly-search{
+  margin-top:22px;display:flex;gap:10px;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:8px;box-shadow:var(--shadow);max-width:520px
+}
+.oly-search input{
+  flex:1;background:transparent;border:0;outline:0;color:var(--txt);padding:8px 10px;font-size:14px
+}
+.oly-search input::placeholder{color:var(--txt-3)}
+.oly-search button{
+  border:0;cursor:pointer;background:linear-gradient(135deg,#4fd1c5,#3aa8a0);color:#08201e;
+  font-weight:700;padding:9px 20px;border-radius:9px;font-size:14px
+}
+.oly-quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.oly-quick a{
+  font-size:13px;color:var(--txt-2);border:1px solid var(--line);background:var(--card);
+  padding:6px 13px;border-radius:999px;transition:.2s
+}
+.oly-quick a:hover{color:var(--gold);border-color:rgba(255,194,70,.4);transform:translateY(-2px)}
+.oly-poster-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.oly-poster{
+  border-radius:12px;height:104px;border:1px solid var(--line);position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;padding:9px;font-size:12px;color:#fff;font-weight:600;
+  box-shadow:var(--shadow);transition:.25s
+}
+.oly-poster:hover{transform:translateY(-4px)}
+.oly-poster span{position:relative;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.oly-poster::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.75))}
+.oly-poster.p1{background:linear-gradient(135deg,#3b2a6b,#8a5cf0)}
+.oly-poster.p2{background:linear-gradient(135deg,#6b2a3e,#f2758e)}
+.oly-poster.p3{background:linear-gradient(135deg,#1d4a52,#4fd1c5)}
+.oly-poster.p4{background:linear-gradient(135deg,#5a3a12,#ffc246)}
+.oly-poster.p5{background:linear-gradient(135deg,#22304a,#5d8bf4)}
+.oly-poster.p6{background:linear-gradient(135deg,#4a2f1c,#e08b4b)}
+.oly-sec{padding:38px 0}
+.oly-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.oly-sec-head h2{font-size:22px;font-weight:800;letter-spacing:.4px;position:relative;padding-left:14px}
+.oly-sec-head h2::before{
+  content:"";position:absolute;left:0;top:5px;bottom:5px;width:4px;border-radius:3px;
+  background:linear-gradient(180deg,var(--gold),#ff8a3d)
+}
+.oly-sec-head p{color:var(--txt-3);font-size:13.5px}
+.oly-sec-head a.more{font-size:13px;color:var(--gold)}
+.oly-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);transition:.25s
+}
+.oly-card:hover{transform:translateY(-3px);border-color:rgba(255,194,70,.3)}
+.oly-intro{
+  display:grid;grid-template-columns:1fr;gap:0;
+  background:linear-gradient(135deg,rgba(255,194,70,.06),rgba(79,209,197,.05));
+  border:1px solid var(--line);border-radius:16px;padding:26px 28px
+}
+.oly-intro h3{font-size:17px;margin-bottom:10px;color:var(--gold)}
+.oly-intro p{color:var(--txt-2);margin-bottom:10px;font-size:14.5px}
+.oly-intro p:last-child{margin-bottom:0}
+.oly-cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.oly-cat{
+  display:flex;align-items:center;gap:12px;padding:15px 16px;border-radius:12px;
+  background:var(--card);border:1px solid var(--line);transition:.22s
+}
+.oly-cat:hover{transform:translateY(-3px);border-color:rgba(79,209,197,.4);background:var(--card-2)}
+.oly-cat i{
+  width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-style:normal;
+  font-size:16px;background:var(--gold-soft);color:var(--gold);flex:none
+}
+.oly-cat b{display:block;font-size:14.5px}
+.oly-cat small{color:var(--txt-3);font-size:12px}
+.oly-reco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.oly-rc{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  display:flex;flex-direction:column;transition:.25s;box-shadow:var(--shadow)
+}
+.oly-rc:hover{transform:translateY(-4px);border-color:rgba(255,194,70,.3)}
+.oly-rc-poster{height:112px;position:relative;display:flex;align-items:flex-end;padding:10px 12px}
+.oly-rc-poster::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.8))}
+.oly-rc-poster span{position:relative;z-index:2;font-size:12px;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.oly-rc-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.oly-rc-body h3{font-size:15.5px;font-weight:700}
+.oly-rc-body p{font-size:13px;color:var(--txt-2);line-height:1.7;flex:1}
+.oly-tags{display:flex;flex-wrap:wrap;gap:6px}
+.oly-tags span{
+  font-size:11.5px;color:var(--cyan);background:rgba(79,209,197,.10);
+  border:1px solid rgba(79,209,197,.2);padding:2px 8px;border-radius:6px
+}
+.oly-tags span.g{color:var(--gold);background:var(--gold-soft);border-color:rgba(255,194,70,.22)}
+.oly-meta{display:flex;gap:14px;font-size:12px;color:var(--txt-3);border-top:1px dashed var(--line);padding-top:9px}
+.oly-meta b{color:var(--gold);font-weight:700}
+.oly-update{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.oly-up-item{
+  display:flex;gap:13px;padding:14px 15px;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;transition:.22s
+}
+.oly-up-item:hover{border-color:rgba(79,209,197,.35);transform:translateY(-2px)}
+.oly-up-ep{
+  flex:none;width:52px;height:52px;border-radius:10px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;background:var(--card-2);border:1px solid var(--line);
+  font-size:11px;color:var(--txt-3)
+}
+.oly-up-ep b{font-size:15px;color:var(--gold)}
+.oly-up-txt b{font-size:14.5px;display:block;margin-bottom:3px}
+.oly-up-txt small{color:var(--txt-2);font-size:12.5px;line-height:1.6;display:block}
+.oly-up-txt em{font-style:normal;color:var(--txt-3);font-size:11.5px;margin-top:5px;display:block}
+.oly-article{display:grid;grid-template-columns:1fr 300px;gap:30px;align-items:start}
+.oly-prose p{color:var(--txt-2);margin-bottom:14px;font-size:14.8px;line-height:1.9;text-align:justify}
+.oly-prose h3{font-size:17px;margin:22px 0 10px;color:var(--gold)}
+.oly-prose h3:first-child{margin-top:0}
+.oly-aside{position:sticky;top:80px;display:flex;flex-direction:column;gap:14px}
+.oly-aside-box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 17px}
+.oly-aside-box h4{font-size:14px;margin-bottom:11px;color:var(--gold)}
+.oly-aside-box ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.oly-aside-box li{font-size:13px;color:var(--txt-2);display:flex;gap:9px}
+.oly-aside-box li i{font-style:normal;color:var(--txt-3);font-size:12px;flex:none}
+.oly-aside-box li a:hover{color:var(--gold)}
+.oly-data{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.oly-data-item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;text-align:center}
+.oly-data-item b{display:block;font-size:26px;color:var(--gold);font-weight:800}
+.oly-data-item span{font-size:12.5px;color:var(--txt-3)}
+.oly-faq{display:flex;flex-direction:column;gap:10px}
+.oly-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 16px;transition:.2s}
+.oly-faq details[open]{border-color:rgba(255,194,70,.32);background:var(--card-2)}
+.oly-faq summary{
+  cursor:pointer;list-style:none;padding:14px 0;font-size:14.5px;font-weight:600;
+  display:flex;justify-content:space-between;gap:12px;align-items:center
+}
+.oly-faq summary::-webkit-details-marker{display:none}
+.oly-faq summary::after{content:"+";color:var(--gold);font-size:17px;font-weight:400;flex:none}
+.oly-faq details[open] summary::after{content:"−"}
+.oly-faq p{color:var(--txt-2);font-size:13.8px;padding:0 0 15px;line-height:1.85}
+.oly-cmts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.oly-cmt{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px}
+.oly-cmt-head{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.oly-avatar{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;
+  font-size:12.5px;font-weight:800;color:#10151f
+}
+.oly-cmt-head b{font-size:13px}
+.oly-cmt-head time{margin-left:auto;font-size:11.5px;color:var(--txt-3)}
+.oly-cmt p{font-size:13.4px;color:var(--txt-2);line-height:1.75}
+.oly-cmt .score{color:var(--gold);font-size:12px;margin-left:6px}
+.oly-news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.oly-news-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px 18px;transition:.24s}
+.oly-news-card:hover{transform:translateY(-3px);border-color:rgba(79,209,197,.35)}
+.oly-news-card time{font-size:12px;color:var(--txt-3);display:block;margin-bottom:7px}
+.oly-news-card h3{font-size:15px;line-height:1.55;margin-bottom:8px}
+.oly-news-card p{font-size:13px;color:var(--txt-2);line-height:1.75}
+.oly-sub{
+  background:linear-gradient(120deg,rgba(255,194,70,.13),rgba(79,209,197,.12));
+  border:1px solid rgba(255,194,70,.22);border-radius:16px;padding:28px;
+  display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:space-between
+}
+.oly-sub h3{font-size:19px;margin-bottom:6px}
+.oly-sub p{color:var(--txt-2);font-size:13.5px}
+.oly-sub .oly-search{max-width:420px;margin-top:0;flex:1}
+.oly-foot{border-top:1px solid var(--line);margin-top:36px;padding:32px 0 24px;background:rgba(0,0,0,.18)}
+.oly-foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:26px;margin-bottom:24px}
+.oly-foot h4{font-size:14px;margin-bottom:11px;color:var(--txt)}
+.oly-foot p{font-size:12.8px;color:var(--txt-3);line-height:1.85}
+.oly-foot ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.oly-foot li{font-size:12.8px;color:var(--txt-3)}
+.oly-foot li a:hover{color:var(--gold)}
+.oly-copy{border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--txt-3);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:980px){
+  .oly-hero-grid{grid-template-columns:1fr}
+  .oly-poster-wall{grid-template-columns:repeat(3,1fr)}
+  .oly-cat-grid{grid-template-columns:repeat(2,1fr)}
+  .oly-reco-grid{grid-template-columns:repeat(2,1fr)}
+  .oly-article{grid-template-columns:1fr}
+  .oly-aside{position:static}
+  .oly-data{grid-template-columns:repeat(2,1fr)}
+  .oly-news{grid-template-columns:repeat(2,1fr)}
+  .oly-foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .oly-hero h1{font-size:26px}
+  .oly-hero{padding:28px 0 12px}
+  .oly-sec{padding:26px 0}
+  .oly-sec-head h2{font-size:19px}
+  .oly-reco-grid,.oly-update,.oly-cmts,.oly-news{grid-template-columns:1fr}
+  .oly-poster-wall{display:none}
+  .oly-nav{display:none}
+  .oly-head-btn{padding:7px 12px;font-size:12.5px}
+  .oly-intro{padding:20px}
+  .oly-foot-grid{grid-template-columns:1fr}
+  .oly-sub{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="oly-head">
+  <div class="wrap oly-head-in">
+    <a class="oly-logo" href="/#oly-home"><i>欧</i>欧乐影院</a>
+    <nav class="oly-nav">
+      <a href="/#oly-home">首页</a>
+      <a href="/#oly-hot">热门推荐</a>
+      <a href="/#oly-update">最新更新</a>
+      <a href="/#oly-cat">影视分类</a>
+      <a href="/#oly-deep">深度解析</a>
+      <a href="/#oly-guide">观影指南</a>
+      <a href="/#oly-faq">常见问题</a>
+      <a href="/#oly-news">影视资讯</a>
+    </nav>
+    <a class="oly-head-btn" href="/#oly-hot">看热门</a>
+  </div>
+</header>
+
+<main id="oly-home">
+
+  <!-- Banner -->
+  <section class="oly-hero">
+    <div class="wrap oly-hero-grid">
+      <div>
+        <span class="oly-kicker"><b></b>2026 影视专题 · 欧乐影院内容聚合</span>
+        <h1>欧乐影院：<em>热门影视剧集</em>在线观看与追剧推荐指南</h1>
+        <p class="lead">从院线新片到热播剧集，从高分口碑到冷门佳作，欧乐影院专题帮你把“看什么、先看哪部、哪里更新最快”一次理清。</p>
+        <p class="lead">按题材、口碑、更新节奏三条线筛选内容，减少盲目翻找，把时间留给真正好看的片子。</p>
+        <form class="oly-search" onsubmit="return false">
+          <input type="text" placeholder="搜索片名、演员、导演或类型，如：悬疑 / 年代剧">
+          <button type="button">搜索影片</button>
+        </form>
+        <div class="oly-quick">
+          <a href="/#oly-hot">本周热榜</a>
+          <a href="/#oly-update">今日更新</a>
+          <a href="/#oly-cat">高分电影</a>
+          <a href="/#oly-cat">热播剧集</a>
+          <a href="/#oly-deep">悬疑推理</a>
+          <a href="/#oly-cat">都市情感</a>
+          <a href="/#oly-guide">观影顺序</a>
+          <a href="/#oly-faq">新人答疑</a>
+        </div>
+      </div>
+      <div class="oly-poster-wall">
+        <div class="oly-poster p1"><span>悬疑 · 迷雾档案</span></div>
+        <div class="oly-poster p2"><span>都市 · 长夜有约</span></div>
+        <div class="oly-poster p3"><span>科幻 · 星际回声</span></div>
+        <div class="oly-poster p4"><span>年代 · 山河旧梦</span></div>
+        <div class="oly-poster p5"><span>动作 · 逆风追击</span></div>
+        <div class="oly-poster p6"><span>喜剧 · 周末计划</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 平台介绍 -->
+  <section class="oly-sec" id="oly-intro">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院内容简介：这个专题解决什么问题</h2>
+        <p>适合收藏的影视内容导航页</p>
+      </div>
+      <div class="oly-intro">
+        <h3>把“想看电影电视剧”变成一个可执行的选择</h3>
+        <p>很多人打开影视页面时，并不是没有内容可看，而是选择太多、判断成本太高。欧乐影院这个专题页的定位很明确：不追求把所有片名堆在一起，而是按照题材、口碑、更新节奏和观看场景，把值得看的内容分层呈现出来。无论你是想找一部两小时的电影放松，还是准备追一部每周更新的剧集，都能从这里先建立一个大致的判断。</p>
+        <p>页面内容主要面向三类受众：一是习惯先看口碑再决定是否开追的谨慎型观众；二是喜欢按题材找片的类型片爱好者，比如悬疑、犯罪、年代、科幻、都市情感；三是时间碎片化、希望快速知道“今天有什么更新”的追更用户。针对这三类需求，我们把热门推荐、最新更新、分类入口、深度解析和常见问题分别拆开，让浏览路径更短。</p>
+        <p>欧乐影院相关的内容信息更新较快，因此页面里保留了模拟的热度、评分和更新状态字段，方便你判断内容的新鲜度。同时，深度解析部分会说明一部作品大致适合什么人、节奏快慢如何、和同类作品相比优势在哪里，这类信息往往比单纯的评分更有参考价值。</p>
+        <p>如果你只是路过，可以先看热门推荐和最新更新；如果你想系统整理自己的观影清单，建议从分类入口进入，再结合深度解析和观影指南做二次筛选。收藏本页，后续查找同类内容会更省时间。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="oly-sec" id="oly-cat">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院影视分类入口</h2>
+        <p>按题材与观看场景快速定位</p>
+        <a class="more" href="/#oly-hot">查看全部 →</a>
+      </div>
+      <div class="oly-cat-grid">
+        <a class="oly-cat" href="/#oly-hot"><i>悬</i><span><b>悬疑推理</b><small>反转、案件、心理博弈</small></span></a>
+        <a class="oly-cat" href="/#oly-hot"><i>剧</i><span><b>热播剧集</b><small>周更、连更、完结剧</small></span></a>
+        <a class="oly-cat" href="/#oly-hot"><i>影</i><span><b>高分电影</b><small>口碑佳作与经典重看</small></span></a>
+        <a class="oly-cat" href="/#oly-hot"><i>科</i><span><b>科幻奇幻</b><small>世界观与视觉奇观</small></span></a>
+        <a class="oly-cat" href="/#oly-hot"><i>都</i><span><b>都市情感</b><small>职场、家庭、成长</small></span></a>
+        <a class="oly-cat" href="/#oly-hot"><i>年</i><span><b>年代历史</b><small>时代群像与真实改编</small></span></a>
+        <a class="oly-cat" href="/#oly-hot"><i>喜</i><span><b>轻松喜剧</b><small>下饭、解压、轻喜剧</small></span></a>
+        <a class="oly-cat" href="/#oly-hot"><i>动</i><span><b>动作冒险</b><small>追逐、打斗、爽感节奏</small></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门推荐 -->
+  <section class="oly-sec" id="oly-hot">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院本周热门推荐</h2>
+        <p>综合热度、口碑与讨论度整理</p>
+      </div>
+      <div class="oly-reco-grid">
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#2b1d52,#7a4be0)"><span>迷雾档案 · 第一季</span></div>
+          <div class="oly-rc-body">
+            <h3>迷雾档案</h3>
+            <div class="oly-tags"><span>悬疑</span><span>刑侦</span><span class="g">强反转</span></div>
+            <p>以旧案重启为线索，前四集铺陈克制，第五集开始收紧节奏。适合喜欢一边看一边推逻辑的观众。</p>
+            <div class="oly-meta"><span>热度 <b>9.4</b></span><span>更新至 12 集</span><span>2026-11-07</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#5c2437,#e3688a)"><span>长夜有约 · 都市情感</span></div>
+          <div class="oly-rc-body">
+            <h3>长夜有约</h3>
+            <div class="oly-tags"><span>都市</span><span>群像</span><span class="g">慢热</span></div>
+            <p>三条人物线并行，前段偏生活流，中段开始把职场与家庭矛盾摆上台面，情绪浓度逐步升高。</p>
+            <div class="oly-meta"><span>热度 <b>8.9</b></span><span>更新至 18 集</span><span>2026-11-06</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#123c44,#46bfb3)"><span>星际回声 · 科幻</span></div>
+          <div class="oly-rc-body">
+            <h3>星际回声</h3>
+            <div class="oly-tags"><span>科幻</span><span>太空</span><span class="g">视觉系</span></div>
+            <p>世界观设定扎实，镜头语言偏冷调，适合在安静环境里连看，剧情推进靠细节而非台词堆砌。</p>
+            <div class="oly-meta"><span>热度 <b>9.1</b></span><span>已完结 10 集</span><span>2026-11-05</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#4d3410,#e0a53a)"><span>山河旧梦 · 年代群像</span></div>
+          <div class="oly-rc-body">
+            <h3>山河旧梦</h3>
+            <div class="oly-tags"><span>年代</span><span>家族</span><span class="g">演技派</span></div>
+            <p>以家族三代人的迁徙为轴，细节考究，适合喜欢慢节奏时代叙事、愿意看人物成长的观众。</p>
+            <div class="oly-meta"><span>热度 <b>8.7</b></span><span>更新至 26 集</span><span>2026-11-06</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#1b2a44,#4f7fe0)"><span>逆风追击 · 动作</span></div>
+          <div class="oly-rc-body">
+            <h3>逆风追击</h3>
+            <div class="oly-tags"><span>动作</span><span>犯罪</span><span class="g">爽感</span></div>
+            <p>开场十分钟直接进入追逐戏，标准商业类型片结构。适合下班后不费脑子的解压观看。</p>
+            <div class="oly-meta"><span>热度 <b>8.5</b></span><span>电影 · 118 分钟</span><span>2026-11-04</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#3d2a16,#b97a3e)"><span>周末计划 · 轻喜剧</span></div>
+          <div class="oly-rc-body">
+            <h3>周末计划</h3>
+            <div class="oly-tags"><span>喜剧</span><span>生活</span><span class="g">下饭</span></div>
+            <p>小成本生活喜剧，笑点密集但不油腻，单集 30 分钟，非常适合吃饭时随手打开一集。</p>
+            <div class="oly-meta"><span>热度 <b>8.3</b></span><span>更新至 20 集</span><span>2026-11-07</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#2f2440,#8a6bd6)"><span>沉默证人 · 律政</span></div>
+          <div class="oly-rc-body">
+            <h3>沉默证人</h3>
+            <div class="oly-tags"><span>律政</span><span>单元剧</span><span class="g">思辨</span></div>
+            <p>单元案件结构，每集独立成篇又不脱离主线。适合喜欢法庭辩论和证据推演的类型观众。</p>
+            <div class="oly-meta"><span>热度 <b>8.8</b></span><span>更新至 14 集</span><span>2026-11-05</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#123a34,#3fa885)"><span>海雾之下 · 文艺</span></div>
+          <div class="oly-rc-body">
+            <h3>海雾之下</h3>
+            <div class="oly-tags"><span>文艺</span><span>小镇</span><span class="g">氛围</span></div>
+            <p>节奏很慢，靠画面和留白撑起情绪。喜欢强情节的观众可能会觉得闷，但氛围党会很喜欢。</p>
+            <div class="oly-meta"><span>热度 <b>8.1</b></span><span>电影 · 132 分钟</span><span>2026-11-03</span></div>
+          </div>
+        </article>
+
+        <article class="oly-rc">
+          <div class="oly-rc-poster" style="background:linear-gradient(135deg,#40202c,#c2547a)"><span>她的第二人生 · 女性</span></div>
+          <div class="oly-rc-body">
+            <h3>她的第二人生</h3>
+            <div class="oly-tags"><span>女性</span><span>成长</span><span class="g">现实向</span></div>
+            <p>聚焦中年重启话题，台词生活化，讨论度高。适合喜欢现实题材、愿意看人物弧光的观众。</p>
+            <div class="oly-meta"><span>热度 <b>8.6</b></span><span>更新至 22 集</span><span>2026-11-06</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="oly-sec" id="oly-update">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院最新更新与热播动态</h2>
+        <p>2026 年 11 月 7 日 更新记录</p>
+        <a class="more" href="/#oly-guide">追更指南 →</a>
+      </div>
+      <div class="oly-update">
+
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>12</b>集</div>
+          <div class="oly-up-txt"><b>迷雾档案 第一季</b><small>第 12 集已上线，本集揭开旧案关键证据，主线反转集中释放。</small><em>2026-11-07 09:20</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>18</b>集</div>
+          <div class="oly-up-txt"><b>长夜有约</b><small>第 18 集更新，家庭线与职场线首次正面交汇，讨论度明显上升。</small><em>2026-11-07 08:45</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>20</b>集</div>
+          <div class="oly-up-txt"><b>周末计划</b><small>第 20 集上线，单元式轻喜剧，适合吃饭时随手打开。</small><em>2026-11-07 10:05</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>新片</b></div>
+          <div class="oly-up-txt"><b>逆风追击</b><small>动作犯罪新片上线，开场追逐段落完成度高，适合解压观看。</small><em>2026-11-06 21:30</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>26</b>集</div>
+          <div class="oly-up-txt"><b>山河旧梦</b><small>第 26 集更新，家族第二代故事线收束，年代细节依旧是加分项。</small><em>2026-11-06 19:10</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>完</b>结</div>
+          <div class="oly-up-txt"><b>星际回声</b><small>全 10 集完结，适合一次性连看，结局留白讨论较多。</small><em>2026-11-05 22:00</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>14</b>集</div>
+          <div class="oly-up-txt"><b>沉默证人</b><small>第 14 集更新，新案件涉及证据链争议，单元剧结构依旧稳定。</small><em>2026-11-05 20:15</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>22</b>集</div>
+          <div class="oly-up-txt"><b>她的第二人生</b><small>第 22 集上线，主角重启事业的支线获得较多正面反馈。</small><em>2026-11-06 17:40</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>重映</b></div>
+          <div class="oly-up-txt"><b>海雾之下</b><small>文艺片重看推荐，氛围与摄影是主要看点，建议安静环境观看。</small><em>2026-11-03 14:00</em></div>
+        </div>
+        <div class="oly-up-item">
+          <div class="oly-up-ep"><b>预告</b></div>
+          <div class="oly-up-txt"><b>迷雾档案 第二季</b><small>官方放出先导预告，新角色加入，预计明年上线。</small><em>2026-11-07 11:00</em></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="oly-sec" id="oly-deep">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院深度解析：怎么挑一部真正适合自己的片</h2>
+        <p>从类型、节奏到人物，拆解观影决策</p>
+      </div>
+      <div class="oly-article">
+        <div class="oly-prose">
+          <h3>先分清“想放松”还是“想投入”</h3>
+          <p>在欧乐影院这类内容聚合场景里，最常见的浪费不是找不到片，而是选错片。同样评分 8.5 的两部作品，一部是快节奏商业类型片，一部是慢热文艺叙事，观看体验可能完全相反。所以在打开任何一部之前，先问自己一个问题：现在是想放松，还是愿意投入注意力？如果是前者，优先选动作、喜剧、单元剧结构的内容；如果是后者，再考虑悬疑推理、年代群像、现实题材这类需要连续观看、需要记住人物关系的作品。</p>
+          <h3>悬疑与刑侦：重点看信息释放节奏</h3>
+          <p>悬疑类内容的核心不是“有没有反转”，而是反转之前的信息铺得是否合理。像《迷雾档案》这类以旧案重启为主线的作品，前几集往往节奏偏慢，用大量细节做铺垫，真正收紧是在中段之后。判断一部悬疑剧是否适合自己，可以看两个指标：一是单集是否留有推进感，二是配角是否具备独立动机。如果所有人物都只为主角服务，反转再多也容易显得单薄。欧乐影院在整理这类内容时，会额外标注“强反转”“慢热”“单元结构”等标签，就是为了减少误判。</p>
+          <h3>都市情感与现实题材：看人物是否立得住</h3>
+          <p>都市情感剧最大的风险是悬浮。《长夜有约》《她的第二人生》这类作品之所以讨论度高，往往不是因为情节多离奇，而是人物选择有现实依据。观众在追这类剧时，真正关注的是“如果换成我会怎么做”。因此看都市情感内容，可以优先关注台词是否生活化、配角是否有完整动机、矛盾是否来自人物性格而非强行巧合。欧乐影院在推荐时会把“现实向”“群像”“慢热”这些词放在显著位置，正是为了让观众提前对齐预期。</p>
+          <h3>科幻与视觉系：世界观和镜头语言同等重要</h3>
+          <p>科幻内容的门槛不在特效，而在设定是否自洽。《星际回声》这类作品的优势在于用较少的集数讲清一个完整世界观，镜头偏冷调，信息通过画面传递而非旁白解释。看科幻内容建议在安静环境下连看，因为很多伏笔藏在背景和道具里，中途频繁打断容易漏掉关键信息。欧乐影院对这类内容的标注会更偏向“视觉系”“设定向”，方便观众按自己的偏好筛选。</p>
+          <h3>节奏与消费体验：单集时长决定追更方式</h3>
+          <p>单集 30 分钟的轻喜剧适合碎片时间，单集 45 到 60 分钟的剧情剧更适合整块时间连看，电影则需要两小时左右的完整注意力。欧乐影院在页面里标注集数和时长，本质上是在帮观众匹配自己的时间结构。追更用户建议优先关注更新节奏稳定的作品，一次性完结的剧集则更适合周末集中观看。</p>
+          <h3>同类比较：不要只看评分</h3>
+          <p>评分只能说明整体口碑，不能说明是否适合你。更实用的比较维度是：题材是否对味、节奏是否能接受、人物是否让你愿意继续看下去。欧乐影院把热门推荐、分类入口和深度解析放在同一页，就是希望观众先建立判断框架，再进入具体内容，而不是被单一数字牵着走。</p>
+        </div>
+        <aside class="oly-aside">
+          <div class="oly-aside-box">
+            <h4>本页速览目录</h4>
+            <ul>
+              <li><i>01</i><a href="/#oly-intro">内容简介</a></li>
+              <li><i>02</i><a href="/#oly-cat">影视分类</a></li>
+              <li><i>03</i><a href="/#oly-hot">热门推荐</a></li>
+              <li><i>04</i><a href="/#oly-update">最新更新</a></li>
+              <li><i>05</i><a href="/#oly-deep">深度解析</a></li>
+              <li><i>06</i><a href="/#oly-guide">观影指南</a></li>
+              <li><i>07</i><a href="/#oly-faq">常见问题</a></li>
+              <li><i>08</i><a href="/#oly-cmt">用户评论</a></li>
+            </ul>
+          </div>
+          <div class="oly-aside-box">
+            <h4>编辑提醒</h4>
+            <ul>
+              <li><i>·</i>悬疑类建议连看 3 集再判断</li>
+              <li><i>·</i>文艺片尽量安静环境观看</li>
+              <li><i>·</i>轻喜剧适合碎片时间</li>
+              <li><i>·</i>完结剧更适合周末集中看</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据看板 -->
+  <section class="oly-sec" id="oly-data">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院内容数据看板</h2>
+        <p>模拟统计，仅作浏览参考</p>
+      </div>
+      <div class="oly-data">
+        <div class="oly-data-item"><b>1280+</b><span>收录影视条目</span></div>
+        <div class="oly-data-item"><b>46</b><span>本周更新剧集</span></div>
+        <div class="oly-data-item"><b>8.6</b><span>平均口碑分</span></div>
+        <div class="oly-data-item"><b>12</b><span>热门题材分类</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观影指南 -->
+  <section class="oly-sec" id="oly-guide">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院观影体验指南</h2>
+        <p>怎么用这个页面更省时间</p>
+      </div>
+      <div class="oly-article" style="grid-template-columns:1fr">
+        <div class="oly-prose">
+          <h3>按浏览路径使用，而不是从头翻到尾</h3>
+          <p>欧乐影院专题页的结构是有意设计的：首屏解决“现在有什么值得看”，热门推荐解决“大家都在看什么”，最新更新解决“今天更新了哪些”，分类入口解决“我想按题材找”，深度解析解决“这部片到底适不适合我”。如果你时间紧，直接看前两个模块即可；如果你准备认真整理一份片单，建议按分类入口、深度解析、常见问题的顺序浏览。</p>
+          <p>页面在移动端的阅读顺序也做了简化，卡片会纵向排列，避免横向滚动带来的误触。追更用户可以把页面加入收藏，每次打开先看最新更新模块，能较快确认当天有没有自己追的剧集更新。</p>
+          <p>相关推荐部分的作用是扩展浏览路径。看完一部悬疑剧，页面会引导你去看同类型的律政或犯罪单元剧，而不是随机跳转。这种关联推荐比单纯按热度排序更接近真实观影习惯。</p>
+          <p>最后提醒一点：页面的评分、热度和更新时间均为内容整理用途的模拟信息，具体内容以实际平台为准。建议把本页当作选片参考，而不是唯一判断依据。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="oly-sec" id="oly-faq">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院常见问题</h2>
+        <p>新观众最常问的 6 个问题</p>
+      </div>
+      <div class="oly-faq">
+        <details open>
+          <summary>欧乐影院这个专题页主要提供什么内容？</summary>
+          <p>这个页面是围绕欧乐影院整理的影视内容专题，主要提供热门电影与剧集的推荐、最新更新记录、题材分类入口、深度解析和常见问题。它更像一个选片导航页，帮助你在打开具体内容之前先建立判断，而不是单纯罗列片名。页面里的热度、评分、更新时间属于内容整理用途的模拟字段。</p>
+        </details>
+        <details>
+          <summary>第一次来，应该先看哪个模块？</summary>
+          <p>建议先看首屏下方的热门推荐，快速了解当前讨论度较高的作品；然后看最新更新，确认有没有正在更新的剧集；如果你想按题材找，再从分类入口进入。深度解析适合在已经有两三个候选片名之后再看，用来做最终判断，这样阅读效率更高。</p>
+        </details>
+        <details>
+          <summary>悬疑类和都市情感类应该怎么选？</summary>
+          <p>如果你愿意连续投入注意力、喜欢一边看一边推逻辑，优先选悬疑刑侦类，注意前几集可能偏慢热，建议连看三集再判断。如果你更想放松、希望台词生活化，都市情感和轻喜剧更合适。两类内容的节奏差异明显，选错类型往往比选错具体片名更影响体验。</p>
+        </details>
+        <details>
+          <summary>追更剧集和一次性完结的剧集，观看方式有什么不同？</summary>
+          <p>追更剧集适合按周跟进，优点是能参与讨论、不容易疲劳，缺点是需要记住人物关系。一次性完结的剧集更适合周末集中观看，尤其是科幻、年代群像这类信息密度高的作品，连续观看更容易理解设定。欧乐影院在更新模块里标注了集数和时间，方便你判断节奏。</p>
+        </details>
+        <details>
+          <summary>页面里的评分和热度可以直接当作观看依据吗？</summary>
+          <p>建议作为参考而不是唯一依据。评分反映整体口碑，但无法说明是否适合你的偏好。更实用的做法是结合题材标签、节奏描述和人物设定来判断。比如同样是 8.5 分，慢热文艺片和动作类型片的观看体验差别很大，先对齐预期比看数字更重要。</p>
+        </details>
+        <details>
+          <summary>如果我想找同类型的更多作品，应该怎么浏览？</summary>
+          <p>可以从分类入口进入对应题材，再结合热门推荐里的标签做二次筛选。页面里的相关推荐也会给出同类型方向，比如悬疑之后会衔接律政、犯罪单元剧，都市情感之后会衔接现实向成长题材。这样比随机翻页更容易找到符合口味的作品。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评论 -->
+  <section class="oly-sec" id="oly-cmt">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院用户评论精选</h2>
+        <p>来自近 30 天的真实语气讨论</p>
+      </div>
+      <div class="oly-cmts">
+
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#ffc246">林</span><b>林间晚风</b><span class="score">★★★★★</span><time>2026-11-07</time></div>
+          <p>迷雾档案第 12 集真的把前面埋的线收回来了，之前觉得慢的地方现在看都是有意的。建议新观众至少连看三集再决定。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#4fd1c5">陈</span><b>陈默不语</b><span class="score">★★★★</span><time>2026-11-07</time></div>
+          <p>长夜有约前八集有点温，中段开始好看。台词写得比较生活化，不像有些都市剧一开口就是金句。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#f2758e">苏</span><b>苏打气泡水</b><span class="score">★★★☆</span><time>2026-11-06</time></div>
+          <p>星际回声画面是真的好，但我个人觉得节奏偏慢，看到第四集才完全进入状态。喜欢快节奏的可能要慎重。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#8a6bd6">周</span><b>周末不加班</b><span class="score">★★★★★</span><time>2026-11-06</time></div>
+          <p>周末计划太适合吃饭看了，一集三十分钟，笑点不尴尬。已经安利给同事，大家都说下饭。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#e0a53a">何</span><b>何处是归途</b><span class="score">★★★★</span><time>2026-11-06</time></div>
+          <p>山河旧梦的服化道很用心，年代感不是靠滤镜堆的。就是节奏慢，得静下心来看。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#4f7fe0">李</span><b>李子树下</b><span class="score">★★★★</span><time>2026-11-05</time></div>
+          <p>逆风追击就是标准爆米花片，别抱太高期待，下班看挺解压的。追逐戏拍得比预想好。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#3fa885">吴</span><b>吴桐夜雨</b><span class="score">★★★</span><time>2026-11-05</time></div>
+          <p>海雾之下氛围很好，但剧情确实淡。我看了两次才看完，适合喜欢画面的，不适合想看故事的。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#c2547a">郑</span><b>郑小满</b><span class="score">★★★★★</span><time>2026-11-05</time></div>
+          <p>她的第二人生题材选得好，中年重启这个话题终于有人认真拍了。就是有些配角线可以再收一收。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#ff9d3c">王</span><b>王二狗看剧</b><span class="score">★★★★</span><time>2026-11-04</time></div>
+          <p>沉默证人的单元案件质量比较稳定，法庭辩论部分看得出做过功课。适合喜欢推逻辑的。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#46bfb3">赵</span><b>赵不困</b><span class="score">★★★★</span><time>2026-11-04</time></div>
+          <p>这个页面整理得还算清楚，按题材分类找片比漫无目的翻要省时间。希望能多加点冷门推荐。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#7a4be0">孙</span><b>孙小满</b><span class="score">★★★☆</span><time>2026-11-03</time></div>
+          <p>追更太痛苦了，一周两集根本不够看。迷雾档案能不能一次放完，等更新等到怀疑人生。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#e3688a">刘</span><b>刘浪的猫</b><span class="score">★★★★</span><time>2026-11-03</time></div>
+          <p>欧乐影院的分类做得比较细，都市和年代分得清楚，不会把生活剧和家庭剧混在一起，这点好评。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#5d8bf4">杨</span><b>杨梅酒</b><span class="score">★★★★★</span><time>2026-11-02</time></div>
+          <p>长夜有约第十八集那场对话戏真的顶，两个人谁都没大声，但张力拉满。演员选得好。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#b97a3e">黄</span><b>黄昏放映厅</b><span class="score">★★★</span><time>2026-11-02</time></div>
+          <p>整体推荐还行，不过热度分感觉偏乐观，有几部讨论度没那么高。建议多看看评论再决定。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#ffc246">徐</span><b>徐三三</b><span class="score">★★★★</span><time>2026-11-01</time></div>
+          <p>把星际回声一次性看完了，结局留白挺有想法。喜欢硬科幻的可能会挑设定，我就当氛围片看。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#4fd1c5">马</span><b>马路边边</b><span class="score">★★★★</span><time>2026-10-31</time></div>
+          <p>周末计划和下饭剧的定位很匹配，别当正经剧情片看，心态对了就很好看。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#f2758e">朱</span><b>朱砂痣</b><span class="score">★★★★★</span><time>2026-10-30</time></div>
+          <p>山河旧梦第二代的线比第一代更好看，人物立住了。希望后面别烂尾。</p>
+        </div>
+        <div class="oly-cmt">
+          <div class="oly-cmt-head"><span class="oly-avatar" style="background:#8a6bd6">胡</span><b>胡桃夹子</b><span class="score">★★★☆</span><time>2026-10-29</time></div>
+          <p>希望页面能加个按更新时间排序的功能，现在找最新更新还得往下翻，稍微有点麻烦。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 资讯 -->
+  <section class="oly-sec" id="oly-news">
+    <div class="wrap">
+      <div class="oly-sec-head">
+        <h2>欧乐影院相关资讯</h2>
+        <p>影视动态与内容观察</p>
+      </div>
+      <div class="oly-news">
+
+        <article class="oly-news-card">
+          <time>2026-11-07</time>
+          <h3>迷雾档案第二季放出先导预告，新角色加入</h3>
+          <p>官方发布约 40 秒先导片段，画面延续第一季冷调风格，片尾出现新角色剪影，具体上线时间尚未公布。</p>
+        </article>
+
+        <article class="oly-news-card">
+          <time>2026-11-06</time>
+          <h3>长夜有约讨论度上升，都市群像题材回暖</h3>
+          <p>随着家庭线与职场线正面交汇，该剧社交平台讨论量明显增长，现实向都市题材的关注度出现回升迹象。</p>
+        </article>
+
+        <article class="oly-news-card">
+          <time>2026-11-05</time>
+          <h3>星际回声完结，结局留白引发观众解读</h3>
+          <p>全 10 集完结后，关于结局含义的讨论持续发酵，部分观众认为留白恰到好处，也有观众希望有更明确的收束。</p>
+        </article>
+
+        <article class="oly-news-card">
+          <time>2026-11-04</time>
+          <h3>动作片逆风追击上线，追逐戏完成度获肯定</h3>
+          <p>影片开场十分钟即进入高强度追逐段落，动作设计偏写实，观众普遍认为节奏紧凑，适合解压观看。</p>
+        </article>
+
+        <article class="oly-news-card">
+          <time>2026-11-03</time>
+          <h3>文艺片海雾之下重映，摄影风格成讨论焦点</h3>
+          <p>该片以小镇氛围和长镜头著称，重映后关于画面构图的讨论增多，但也有观众认为叙事节奏偏慢。</p>
+        </article>
+
+        <article class="oly-news-card">
+          <time>2026-11-02</time>
+          <h3>年代剧山河旧梦更新至 26 集，第二代线收束</h3>
+          <p>随着第二代故事线逐步收束，剧情重心开始向家族整体命运转移，服化道细节依旧是观众讨论的重点。</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 订阅引导 -->
+  <section class="oly-sec" id="oly-sub">
+    <div class="wrap">
+      <div class="oly-sub">
+        <div>
+          <h3>把欧乐影院加入收藏，追更不漏集</h3>
+          <p>热门推荐、最新更新、题材分类与观影指南，一处集中查看。</p>
+        </div>
+        <form class="oly-search" onsubmit="return false">
+          <input type="text" placeholder="留下常用邮箱，接收更新提醒">
+          <button type="button">订阅提醒</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="oly-foot">
+  <div class="wrap">
+    <div class="oly-foot-grid">
+      <div>
+        <h4>关于欧乐影院专题</h4>
+        <p>本页面为欧乐影院相关影视内容的整理与推荐专题，围绕热门电影、热播剧集、最新更新、题材分类与观影指南展开，帮助观众更快找到适合自己的内容。页面中的评分、热度与更新时间均为内容整理用途的模拟信息。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="/#oly-hot">热门推荐</a></li>
+          <li><a href="/#oly-update">最新更新</a></li>
+          <li><a href="/#oly-cat">影视分类</a></li>
+          <li><a href="/#oly-deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>帮助与答疑</h4>
+        <ul>
+          <li><a href="/#oly-guide">观影指南</a></li>
+          <li><a href="/#oly-faq">常见问题</a></li>
+          <li><a href="/#oly-cmt">用户评论</a></li>
+          <li><a href="/#oly-news">影视资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <ul>
+          <li><a href="/#oly-home">影视内容导航</a></li>
+          <li><a href="/#oly-home">剧集推荐入口</a></li>
+          <li><a href="/#oly-home">观影清单整理</a></li>
+          <li><a href="/#oly-home">友情链接占位</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="oly-copy">
+      <span>© 2026 欧乐影院内容专题页 · 仅供内容整理与观影参考</span>
+      <span>免责声明：页面信息为内容整理用途，具体片源、更新与版权信息请以实际平台为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+                                          </html>
